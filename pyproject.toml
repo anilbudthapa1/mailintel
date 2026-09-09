@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mailintel-cli"
+version = "1.4.0"
+description = "Local case-based email OSINT CLI"
+requires-python = ">=3.10"
+dependencies = ["dnspython>=2.6,<3", "email-validator>=2.2,<3", "httpx>=0.27,<1", "pypdf==6.18.0", "dkimpy==1.1.8", "publicsuffix2==2.20191221"]
+
+[project.scripts]
+mailintel = "mailintel.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["mailintel*"]
+
+[tool.setuptools.package-data]
+mailintel = ["data/*"]
+

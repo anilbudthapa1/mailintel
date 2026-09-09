@@ -1,0 +1,265 @@
+<!doctype html><html lang="en"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<title>MailIntel case report</title><style>
+body{font:16px/1.55 system-ui,sans-serif;color:#172838;background:#f0f3f5;margin:0;padding:32px}
+main{max-width:960px;margin:auto}h1{font-size:32px}h2{font-size:23px;overflow-wrap:anywhere}
+article{background:white;padding:28px;margin:24px 0;border:1px solid #ccd5dc}
+section{border-top:1px solid #dde4e9;padding:12px 0}h3{font-size:18px}
+span{font-size:13px;font-weight:500;background:#eaf1f4;padding:4px 8px;margin-left:8px}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f8;padding:16px;font-size:13px}
+a{color:#12617d}.hash{font:12px monospace;overflow-wrap:anywhere}footer{font-size:13px}
+@media(max-width:600px){body{padding:16px}article{padding:16px}}@media print{body{background:white;padding:0}details{display:block}article{break-inside:auto}}
+</style><main><p>MAILINTEL / CASE REPORT</p><h1>MailIntel fictional training</h1><p>6 runs · 7 module results · Case 41c13522a19a</p><p>Discovery, DNS, reputation and breach exposure are separate observations. No mailbox ownership is established by these checks.</p><article><h2>student@example.com</h2><p>2026-09-09T12:20:53.595744+00:00 · offline</p><section><h3>syntax <span>valid_syntax</span></h3><p>Syntax only; does not verify deliverability or ownership.</p><p>Source: Local analysis</p><details><summary>Evidence</summary><pre>{
+  &quot;ascii_domain&quot;: &quot;example.com&quot;,
+  &quot;normalised_value&quot;: &quot;student@example.com&quot;,
+  &quot;smtputf8&quot;: false
+}</pre></details></section><section><h3>disposable <span>not_listed</span></h3><p>List membership is not a judgment of the person or proof of mailbox status.</p><p>Source: <a rel="noreferrer" href="https://github.com/disposable-email-domains/disposable-email-domains">https://github.com/disposable-email-domains/disposable-email-domains</a></p><details><summary>Evidence</summary><pre>{
+  &quot;dataset&quot;: {
+    &quot;commit&quot;: &quot;8d5b14f53dff80842e841ee0ae14de2962cee66c&quot;,
+    &quot;entries&quot;: 8742,
+    &quot;sha256&quot;: &quot;9e94123b0f0ebd77ef9cd7c6e7dd39bf7d3b981f618a6d20632647e2de20649b&quot;,
+    &quot;snapshot_date&quot;: &quot;2026-09-08&quot;,
+    &quot;source&quot;: &quot;https://github.com/disposable-email-domains/disposable-email-domains&quot;
+  },
+  &quot;matches&quot;: [],
+  &quot;sha256&quot;: &quot;9e94123b0f0ebd77ef9cd7c6e7dd39bf7d3b981f618a6d20632647e2de20649b&quot;
+}</pre></details></section><p class="hash">Run SHA256: 5592b7f95b825414221a3693cd683100c3e6e8c358c5a0a9505b7f6782b87cd2</p></article><article><h2>examples/training.mbox</h2><p>2026-09-09T12:20:53.708633+00:00 · offline</p><section><h3>mailbox <span>observed</span></h3><p>Local analysis; review limitations in evidence.</p><p>Source: Local analysis</p><details><summary>Evidence</summary><pre>{
+  &quot;input_sha256&quot;: &quot;b8ac9726dd11e1b2bda71a8683753f476ee502c0c53b65eb98662220991fc74f&quot;,
+  &quot;limitations&quot;: &quot;No links/images loaded; attachments not executed or extracted. Threading uses message IDs; infrastructure is a header claim, not owner attribution.&quot;,
+  &quot;matched_messages&quot;: 2,
+  &quot;messages&quot;: [
+    {
+      &quot;addresses&quot;: {
+        &quot;Cc&quot;: [],
+        &quot;From&quot;: [
+          &quot;billing@example.com&quot;
+        ],
+        &quot;Reply-To&quot;: [],
+        &quot;Return-Path&quot;: [],
+        &quot;To&quot;: [
+          &quot;student@example.org&quot;
+        ]
+      },
+      &quot;attachments&quot;: [],
+      &quot;authentication_note&quot;: &quot;Header authentication claims are untrusted unless supplied by your trusted receiving infrastructure. DKIM is not verified here.&quot;,
+      &quot;body&quot;: &quot;Fictional training only.\nAccount number: 1111 2222\nContact billing@example.com\n&quot;,
+      &quot;headers&quot;: {
+        &quot;Authentication-Results&quot;: [],
+        &quot;Cc&quot;: [],
+        &quot;DKIM-Signature&quot;: [],
+        &quot;Date&quot;: [
+          &quot;Tue, 01 Sep 2026 09:00:00 +0000&quot;
+        ],
+        &quot;From&quot;: [
+          &quot;Accounts &lt;billing@example.com&gt;&quot;
+        ],
+        &quot;In-Reply-To&quot;: [],
+        &quot;Message-ID&quot;: [
+          &quot;&lt;training-1@example.com&gt;&quot;
+        ],
+        &quot;Received&quot;: [],
+        &quot;References&quot;: [],
+        &quot;Reply-To&quot;: [],
+        &quot;Return-Path&quot;: [],
+        &quot;Subject&quot;: [
+          &quot;Training invoice&quot;
+        ],
+        &quot;To&quot;: [
+          &quot;student@example.org&quot;
+        ]
+      },
+      &quot;images&quot;: [],
+      &quot;links&quot;: [],
+      &quot;parse_defects&quot;: [],
+      &quot;payment_markers&quot;: [
+        &quot;1111 2222&quot;
+      ],
+      &quot;sha256&quot;: &quot;e4ce45c697c8cf5a4c8dc75bdaae87ecbbb601a0f1773be0b03415ca5eb4794e&quot;,
+      &quot;signals&quot;: [],
+      &quot;source&quot;: &quot;training.mbox#message-1&quot;
+    },
+    {
+      &quot;addresses&quot;: {
+        &quot;Cc&quot;: [],
+        &quot;From&quot;: [
+          &quot;billing@example.com&quot;
+        ],
+        &quot;Reply-To&quot;: [
+          &quot;payment@example.net&quot;
+        ],
+        &quot;Return-Path&quot;: [],
+        &quot;To&quot;: [
+          &quot;student@example.org&quot;
+        ]
+      },
+      &quot;attachments&quot;: [
+        {
+          &quot;bytes&quot;: 46,
+          &quot;declared_type&quot;: &quot;application/pdf&quot;,
+          &quot;detected_type&quot;: &quot;PDF&quot;,
+          &quot;name&quot;: &quot;training-invoice.pdf&quot;,
+          &quot;sha256&quot;: &quot;1a006e0505c59475bb592ddfdb88d0db7a2d8d8f01a81cb4dc0391494f8183be&quot;
+        }
+      ],
+      &quot;authentication_note&quot;: &quot;Header authentication claims are untrusted unless supplied by your trusted receiving infrastructure. DKIM is not verified here.&quot;,
+      &quot;body&quot;: &quot;Fictional training only.\nAccount number: 9999 8888\n\n&lt;p&gt;Training: &lt;a href=\&quot;https://example.net/pay\&quot;&gt;https://example.com/pay&lt;/a&gt;&lt;/p&gt;&lt;img width=\&quot;1\&quot; height=\&quot;1\&quot; src=\&quot;https://example.net/pixel?id=training\&quot;&gt;\n&quot;,
+      &quot;headers&quot;: {
+        &quot;Authentication-Results&quot;: [],
+        &quot;Cc&quot;: [],
+        &quot;DKIM-Signature&quot;: [],
+        &quot;Date&quot;: [
+          &quot;Wed, 02 Sep 2026 09:00:00 +0000&quot;
+        ],
+        &quot;From&quot;: [
+          &quot;Accounts &lt;billing@example.com&gt;&quot;
+        ],
+        &quot;In-Reply-To&quot;: [
+          &quot;&lt;training-1@example.com&gt;&quot;
+        ],
+        &quot;Message-ID&quot;: [
+          &quot;&lt;training-2@example.com&gt;&quot;
+        ],
+        &quot;Received&quot;: [],
+        &quot;References&quot;: [],
+        &quot;Reply-To&quot;: [
+          &quot;payment@example.net&quot;
+        ],
+        &quot;Return-Path&quot;: [],
+        &quot;Subject&quot;: [
+          &quot;Re: Training invoice&quot;
+        ],
+        &quot;To&quot;: [
+          &quot;student@example.org&quot;
+        ]
+      },
+      &quot;images&quot;: [
+        {
+          &quot;possible_tracking_pixel&quot;: true,
+          &quot;reason&quot;: &quot;Small or hidden image&quot;,
+          &quot;source&quot;: &quot;https://example.net/pixel?id=training&quot;
+        }
+      ],
+      &quot;links&quot;: [
+        {
+          &quot;destination&quot;: &quot;https://example.net/pay&quot;,
+          &quot;destination_host&quot;: &quot;example.net&quot;,
+          &quot;display_text&quot;: &quot;https://example.com/pay&quot;,
+          &quot;displayed_host&quot;: &quot;example.com&quot;,
+          &quot;has_query_parameters&quot;: false,
+          &quot;host_mismatch&quot;: true
+        }
+      ],
+      &quot;parse_defects&quot;: [],
+      &quot;payment_markers&quot;: [
+        &quot;9999 8888&quot;
+      ],
+      &quot;sha256&quot;: &quot;7ba9450971152d2f04110492de47f3d680adf2cf0ac98a6c184593c24aeff9ca&quot;,
+      &quot;signals&quot;: [
+        &quot;Reply-To differs from From: can be legitimate; review intended reply destination.&quot;,
+        &quot;Reply destination changed from parent message; manual review required.&quot;,
+        &quot;Labelled payment details changed from parent message; manual review required.&quot;
+      ],
+      &quot;source&quot;: &quot;training.mbox#message-2&quot;
+    }
+  ],
+  &quot;shared_header_infrastructure&quot;: {},
+  &quot;threads&quot;: [
+    {
+      &quot;message_id&quot;: &quot;&lt;training-1@example.com&gt;&quot;,
+      &quot;missing_parent&quot;: false,
+      &quot;parent&quot;: null
+    },
+    {
+      &quot;message_id&quot;: &quot;&lt;training-2@example.com&gt;&quot;,
+      &quot;missing_parent&quot;: false,
+      &quot;parent&quot;: &quot;&lt;training-1@example.com&gt;&quot;
+    }
+  ],
+  &quot;total_messages&quot;: 2
+}</pre></details></section><p class="hash">Run SHA256: 411f0eb92ad2239cfbe320a2e72580aafb527fef05328951a41ccc2844fe406b</p></article><article><h2>examples/contacts.txt</h2><p>2026-09-09T12:20:53.853558+00:00 · offline</p><section><h3>extract <span>observed</span></h3><p>Local analysis; review limitations in evidence.</p><p>Source: Local analysis</p><details><summary>Evidence</summary><pre>{
+  &quot;note&quot;: &quot;Occurrence does not prove ownership, current use or deliverability; no OCR.&quot;,
+  &quot;observations&quot;: [
+    {
+      &quot;alias_note&quot;: &quot;Provider-specific hint only; originals are never merged.&quot;,
+      &quot;confidence&quot;: &quot;observed_in_supplied_document&quot;,
+      &quot;context&quot;: &quot;Support: support@example.com&quot;,
+      &quot;domain&quot;: &quot;example.com&quot;,
+      &quot;email&quot;: &quot;support@example.com&quot;,
+      &quot;location&quot;: &quot;line 2&quot;,
+      &quot;possible_alias_group&quot;: null,
+      &quot;role&quot;: &quot;role_address&quot;,
+      &quot;source&quot;: &quot;contacts.txt&quot;
+    },
+    {
+      &quot;alias_note&quot;: &quot;Provider-specific hint only; originals are never merged.&quot;,
+      &quot;confidence&quot;: &quot;observed_in_supplied_document&quot;,
+      &quot;context&quot;: &quot;Accounts: billing@example.com&quot;,
+      &quot;domain&quot;: &quot;example.com&quot;,
+      &quot;email&quot;: &quot;billing@example.com&quot;,
+      &quot;location&quot;: &quot;line 3&quot;,
+      &quot;possible_alias_group&quot;: null,
+      &quot;role&quot;: &quot;role_address&quot;,
+      &quot;source&quot;: &quot;contacts.txt&quot;
+    }
+  ],
+  &quot;sha256&quot;: &quot;9a24395a9512a9d75ac9dbe4863d07c01563e6b91d9a660f749212221a22c98a&quot;
+}</pre></details></section><p class="hash">Run SHA256: 97182cde32f6110349f6643f565dfec0a7074e2a1bdb47633f29486bcb6af3ce</p></article><article><h2>examples/claims.json</h2><p>2026-09-09T12:20:53.962232+00:00 · offline</p><section><h3>import-claims <span>observed</span></h3><p>Local analysis; review limitations in evidence.</p><p>Source: Local analysis</p><details><summary>Evidence</summary><pre>{
+  &quot;claims&quot;: [
+    {
+      &quot;claim&quot;: &quot;account_association&quot;,
+      &quot;confidence&quot;: &quot;imported_provider_claim&quot;,
+      &quot;email&quot;: &quot;billing@example.com&quot;,
+      &quot;observed_at&quot;: &quot;2026-09-01T00:00:00Z&quot;,
+      &quot;provider&quot;: &quot;Fictional provider A&quot;,
+      &quot;source&quot;: &quot;https://example.com/contact&quot;,
+      &quot;upstream_source&quot;: &quot;training-source&quot;,
+      &quot;value&quot;: &quot;reported-present&quot;
+    },
+    {
+      &quot;claim&quot;: &quot;account_association&quot;,
+      &quot;confidence&quot;: &quot;imported_provider_claim&quot;,
+      &quot;email&quot;: &quot;billing@example.com&quot;,
+      &quot;observed_at&quot;: &quot;2026-09-01T00:00:00Z&quot;,
+      &quot;provider&quot;: &quot;Fictional provider B&quot;,
+      &quot;source&quot;: &quot;https://example.com/contact&quot;,
+      &quot;upstream_source&quot;: &quot;training-source&quot;,
+      &quot;value&quot;: &quot;reported-absent&quot;
+    }
+  ],
+  &quot;input_sha256&quot;: &quot;34220bb775f40c17e5ad4b5859b25952ee64687ed81846e4fe7592976b7ef022&quot;,
+  &quot;note&quot;: &quot;Imported statements, not independently verified. Imported timestamps are supplied claims.&quot;
+}</pre></details></section><p class="hash">Run SHA256: ecda9d591861d4bc05a5c55773d9fa677d426addf718f1b68a3513fe316a7861</p></article><article><h2>examples/dmarc.xml</h2><p>2026-09-09T12:20:54.071371+00:00 · offline</p><section><h3>dmarc <span>observed</span></h3><p>Local analysis; review limitations in evidence.</p><p>Source: Local analysis</p><details><summary>Evidence</summary><pre>{
+  &quot;note&quot;: &quot;Aggregate-report claims; failures may be caused by forwarding or misconfiguration, not necessarily spoofing.&quot;,
+  &quot;organization&quot;: &quot;Fictional receiver&quot;,
+  &quot;policy_domain&quot;: &quot;example.com&quot;,
+  &quot;report_id&quot;: &quot;training&quot;,
+  &quot;rows&quot;: [
+    {
+      &quot;count&quot;: 12,
+      &quot;disposition&quot;: &quot;none&quot;,
+      &quot;dkim&quot;: &quot;pass&quot;,
+      &quot;header_from&quot;: &quot;example.com&quot;,
+      &quot;source_ip&quot;: &quot;192.0.2.1&quot;,
+      &quot;spf&quot;: &quot;fail&quot;
+    }
+  ],
+  &quot;sha256&quot;: &quot;deaf0944d577aeb1105fec05b79366dd6e9c071308a9d32cf0a916a80b3005c5&quot;,
+  &quot;total_messages&quot;: 12
+}</pre></details></section><p class="hash">Run SHA256: ea2b456dc47a0499ecd0cf1f14c3a93635d99615e4f5f8e1bf05e77d0a631f91</p></article><article><h2>examples/names.csv</h2><p>2026-09-09T12:20:54.170062+00:00 · offline</p><section><h3>patterns <span>observed</span></h3><p>Local analysis; review limitations in evidence.</p><p>Source: Local analysis</p><details><summary>Evidence</summary><pre>{
+  &quot;note&quot;: &quot;Requires known names; a matching pattern does not confirm other generated addresses.&quot;,
+  &quot;observations&quot;: [
+    {
+      &quot;confidence&quot;: &quot;matches_supplied_name_and_address&quot;,
+      &quot;domain&quot;: &quot;example.com&quot;,
+      &quot;email&quot;: &quot;alice.smith@example.com&quot;,
+      &quot;matching_pattern&quot;: &quot;first.last&quot;
+    },
+    {
+      &quot;confidence&quot;: &quot;matches_supplied_name_and_address&quot;,
+      &quot;domain&quot;: &quot;example.com&quot;,
+      &quot;email&quot;: &quot;bob.jones@example.com&quot;,
+      &quot;matching_pattern&quot;: &quot;first.last&quot;
+    }
+  ]
+}</pre></details></section><p class="hash">Run SHA256: c04d20511db488344a4157540be500089a43c764ab081959619759730b0be7e5</p></article><footer>When present, breach information is sourced from <a href="https://haveibeenpwned.com/">Have I Been Pwned</a> under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. This report contains personal data; share appropriately.</footer></main></html>

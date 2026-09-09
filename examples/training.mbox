@@ -1,0 +1,56 @@
+From MAILER-DAEMON Wed Sep  9 12:15:19 2026
+From: Accounts <billing@example.com>
+To: student@example.org
+Subject: Training invoice
+Message-ID: <training-1@example.com>
+Date: Tue, 01 Sep 2026 09:00:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Fictional training only.
+Account number: 1111 2222
+Contact billing@example.com
+
+From MAILER-DAEMON Wed Sep  9 12:15:19 2026
+From: Accounts <billing@example.com>
+To: student@example.org
+Reply-To: payment@example.net
+Subject: Re: Training invoice
+Message-ID: <training-2@example.com>
+In-Reply-To: <training-1@example.com>
+Date: Wed, 02 Sep 2026 09:00:00 +0000
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============1939592224101618857=="
+
+--===============1939592224101618857==
+Content-Type: multipart/alternative; boundary="===============8457582178842422586=="
+
+--===============8457582178842422586==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Fictional training only.
+Account number: 9999 8888
+
+--===============8457582178842422586==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<p>Training: <a href=3D"https://example.net/pay">https://example.com/pay</a><=
+/p><img width=3D"1" height=3D"1" src=3D"https://example.net/pixel?id=3Dtraini=
+ng">
+
+--===============8457582178842422586==--
+
+--===============1939592224101618857==
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="training-invoice.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjQKRmljdGlvbmFsIGJ5dGVzLCBub3QgYSB2YWxpZCBpbnZvaWNlLg==
+
+--===============1939592224101618857==--
+

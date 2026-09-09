@@ -1,0 +1,386 @@
+{
+  "case": {
+    "created_at": "2026-09-09T12:20:53.476807+00:00",
+    "id": "41c13522a19a",
+    "name": "MailIntel fictional training"
+  },
+  "integrity_note": "SHA256 covers the stored run payload, excluding its exported sha256 field. Detects accidental changes; not a digital signature against a database administrator.",
+  "runs": [
+    {
+      "case_id": "41c13522a19a",
+      "created_at": "2026-09-09T12:20:53.595744+00:00",
+      "findings": [
+        {
+          "data": {
+            "ascii_domain": "example.com",
+            "normalised_value": "student@example.com",
+            "smtputf8": false
+          },
+          "detail": "Syntax only; does not verify deliverability or ownership.",
+          "interaction": "local",
+          "module": "syntax",
+          "source": null,
+          "status": "valid_syntax"
+        },
+        {
+          "data": {
+            "dataset": {
+              "commit": "8d5b14f53dff80842e841ee0ae14de2962cee66c",
+              "entries": 8742,
+              "sha256": "9e94123b0f0ebd77ef9cd7c6e7dd39bf7d3b981f618a6d20632647e2de20649b",
+              "snapshot_date": "2026-09-08",
+              "source": "https://github.com/disposable-email-domains/disposable-email-domains"
+            },
+            "matches": [],
+            "sha256": "9e94123b0f0ebd77ef9cd7c6e7dd39bf7d3b981f618a6d20632647e2de20649b"
+          },
+          "detail": "List membership is not a judgment of the person or proof of mailbox status.",
+          "interaction": "local",
+          "module": "disposable",
+          "source": "https://github.com/disposable-email-domains/disposable-email-domains",
+          "status": "not_listed"
+        }
+      ],
+      "id": "feffbb4366b540bb8fdc1934187ecf7d",
+      "indicator": "student@example.com",
+      "kind": "email",
+      "profile": "offline",
+      "sha256": "5592b7f95b825414221a3693cd683100c3e6e8c358c5a0a9505b7f6782b87cd2",
+      "version": "1.4.0"
+    },
+    {
+      "case_id": "41c13522a19a",
+      "created_at": "2026-09-09T12:20:53.708633+00:00",
+      "findings": [
+        {
+          "data": {
+            "input_sha256": "b8ac9726dd11e1b2bda71a8683753f476ee502c0c53b65eb98662220991fc74f",
+            "limitations": "No links/images loaded; attachments not executed or extracted. Threading uses message IDs; infrastructure is a header claim, not owner attribution.",
+            "matched_messages": 2,
+            "messages": [
+              {
+                "addresses": {
+                  "Cc": [],
+                  "From": [
+                    "billing@example.com"
+                  ],
+                  "Reply-To": [],
+                  "Return-Path": [],
+                  "To": [
+                    "student@example.org"
+                  ]
+                },
+                "attachments": [],
+                "authentication_note": "Header authentication claims are untrusted unless supplied by your trusted receiving infrastructure. DKIM is not verified here.",
+                "body": "Fictional training only.\nAccount number: 1111 2222\nContact billing@example.com\n",
+                "headers": {
+                  "Authentication-Results": [],
+                  "Cc": [],
+                  "DKIM-Signature": [],
+                  "Date": [
+                    "Tue, 01 Sep 2026 09:00:00 +0000"
+                  ],
+                  "From": [
+                    "Accounts <billing@example.com>"
+                  ],
+                  "In-Reply-To": [],
+                  "Message-ID": [
+                    "<training-1@example.com>"
+                  ],
+                  "Received": [],
+                  "References": [],
+                  "Reply-To": [],
+                  "Return-Path": [],
+                  "Subject": [
+                    "Training invoice"
+                  ],
+                  "To": [
+                    "student@example.org"
+                  ]
+                },
+                "images": [],
+                "links": [],
+                "parse_defects": [],
+                "payment_markers": [
+                  "1111 2222"
+                ],
+                "sha256": "e4ce45c697c8cf5a4c8dc75bdaae87ecbbb601a0f1773be0b03415ca5eb4794e",
+                "signals": [],
+                "source": "training.mbox#message-1"
+              },
+              {
+                "addresses": {
+                  "Cc": [],
+                  "From": [
+                    "billing@example.com"
+                  ],
+                  "Reply-To": [
+                    "payment@example.net"
+                  ],
+                  "Return-Path": [],
+                  "To": [
+                    "student@example.org"
+                  ]
+                },
+                "attachments": [
+                  {
+                    "bytes": 46,
+                    "declared_type": "application/pdf",
+                    "detected_type": "PDF",
+                    "name": "training-invoice.pdf",
+                    "sha256": "1a006e0505c59475bb592ddfdb88d0db7a2d8d8f01a81cb4dc0391494f8183be"
+                  }
+                ],
+                "authentication_note": "Header authentication claims are untrusted unless supplied by your trusted receiving infrastructure. DKIM is not verified here.",
+                "body": "Fictional training only.\nAccount number: 9999 8888\n\n<p>Training: <a href=\"https://example.net/pay\">https://example.com/pay</a></p><img width=\"1\" height=\"1\" src=\"https://example.net/pixel?id=training\">\n",
+                "headers": {
+                  "Authentication-Results": [],
+                  "Cc": [],
+                  "DKIM-Signature": [],
+                  "Date": [
+                    "Wed, 02 Sep 2026 09:00:00 +0000"
+                  ],
+                  "From": [
+                    "Accounts <billing@example.com>"
+                  ],
+                  "In-Reply-To": [
+                    "<training-1@example.com>"
+                  ],
+                  "Message-ID": [
+                    "<training-2@example.com>"
+                  ],
+                  "Received": [],
+                  "References": [],
+                  "Reply-To": [
+                    "payment@example.net"
+                  ],
+                  "Return-Path": [],
+                  "Subject": [
+                    "Re: Training invoice"
+                  ],
+                  "To": [
+                    "student@example.org"
+                  ]
+                },
+                "images": [
+                  {
+                    "possible_tracking_pixel": true,
+                    "reason": "Small or hidden image",
+                    "source": "https://example.net/pixel?id=training"
+                  }
+                ],
+                "links": [
+                  {
+                    "destination": "https://example.net/pay",
+                    "destination_host": "example.net",
+                    "display_text": "https://example.com/pay",
+                    "displayed_host": "example.com",
+                    "has_query_parameters": false,
+                    "host_mismatch": true
+                  }
+                ],
+                "parse_defects": [],
+                "payment_markers": [
+                  "9999 8888"
+                ],
+                "sha256": "7ba9450971152d2f04110492de47f3d680adf2cf0ac98a6c184593c24aeff9ca",
+                "signals": [
+                  "Reply-To differs from From: can be legitimate; review intended reply destination.",
+                  "Reply destination changed from parent message; manual review required.",
+                  "Labelled payment details changed from parent message; manual review required."
+                ],
+                "source": "training.mbox#message-2"
+              }
+            ],
+            "shared_header_infrastructure": {},
+            "threads": [
+              {
+                "message_id": "<training-1@example.com>",
+                "missing_parent": false,
+                "parent": null
+              },
+              {
+                "message_id": "<training-2@example.com>",
+                "missing_parent": false,
+                "parent": "<training-1@example.com>"
+              }
+            ],
+            "total_messages": 2
+          },
+          "detail": "Local analysis; review limitations in evidence.",
+          "module": "mailbox",
+          "source": null,
+          "status": "observed"
+        }
+      ],
+      "id": "76442efc4ee84c7b81d1370d67c2e524",
+      "indicator": "examples/training.mbox",
+      "kind": "mailbox",
+      "profile": "offline",
+      "sha256": "411f0eb92ad2239cfbe320a2e72580aafb527fef05328951a41ccc2844fe406b",
+      "version": "1.4.0"
+    },
+    {
+      "case_id": "41c13522a19a",
+      "created_at": "2026-09-09T12:20:53.853558+00:00",
+      "findings": [
+        {
+          "data": {
+            "note": "Occurrence does not prove ownership, current use or deliverability; no OCR.",
+            "observations": [
+              {
+                "alias_note": "Provider-specific hint only; originals are never merged.",
+                "confidence": "observed_in_supplied_document",
+                "context": "Support: support@example.com",
+                "domain": "example.com",
+                "email": "support@example.com",
+                "location": "line 2",
+                "possible_alias_group": null,
+                "role": "role_address",
+                "source": "contacts.txt"
+              },
+              {
+                "alias_note": "Provider-specific hint only; originals are never merged.",
+                "confidence": "observed_in_supplied_document",
+                "context": "Accounts: billing@example.com",
+                "domain": "example.com",
+                "email": "billing@example.com",
+                "location": "line 3",
+                "possible_alias_group": null,
+                "role": "role_address",
+                "source": "contacts.txt"
+              }
+            ],
+            "sha256": "9a24395a9512a9d75ac9dbe4863d07c01563e6b91d9a660f749212221a22c98a"
+          },
+          "detail": "Local analysis; review limitations in evidence.",
+          "module": "extract",
+          "source": null,
+          "status": "observed"
+        }
+      ],
+      "id": "7d1aa280bded45559624ba14f435c4a7",
+      "indicator": "examples/contacts.txt",
+      "kind": "extract",
+      "profile": "offline",
+      "sha256": "97182cde32f6110349f6643f565dfec0a7074e2a1bdb47633f29486bcb6af3ce",
+      "version": "1.4.0"
+    },
+    {
+      "case_id": "41c13522a19a",
+      "created_at": "2026-09-09T12:20:53.962232+00:00",
+      "findings": [
+        {
+          "data": {
+            "claims": [
+              {
+                "claim": "account_association",
+                "confidence": "imported_provider_claim",
+                "email": "billing@example.com",
+                "observed_at": "2026-09-01T00:00:00Z",
+                "provider": "Fictional provider A",
+                "source": "https://example.com/contact",
+                "upstream_source": "training-source",
+                "value": "reported-present"
+              },
+              {
+                "claim": "account_association",
+                "confidence": "imported_provider_claim",
+                "email": "billing@example.com",
+                "observed_at": "2026-09-01T00:00:00Z",
+                "provider": "Fictional provider B",
+                "source": "https://example.com/contact",
+                "upstream_source": "training-source",
+                "value": "reported-absent"
+              }
+            ],
+            "input_sha256": "34220bb775f40c17e5ad4b5859b25952ee64687ed81846e4fe7592976b7ef022",
+            "note": "Imported statements, not independently verified. Imported timestamps are supplied claims."
+          },
+          "detail": "Local analysis; review limitations in evidence.",
+          "module": "import-claims",
+          "source": null,
+          "status": "observed"
+        }
+      ],
+      "id": "0555a469221040138657b472a3247f1c",
+      "indicator": "examples/claims.json",
+      "kind": "import-claims",
+      "profile": "offline",
+      "sha256": "ecda9d591861d4bc05a5c55773d9fa677d426addf718f1b68a3513fe316a7861",
+      "version": "1.4.0"
+    },
+    {
+      "case_id": "41c13522a19a",
+      "created_at": "2026-09-09T12:20:54.071371+00:00",
+      "findings": [
+        {
+          "data": {
+            "note": "Aggregate-report claims; failures may be caused by forwarding or misconfiguration, not necessarily spoofing.",
+            "organization": "Fictional receiver",
+            "policy_domain": "example.com",
+            "report_id": "training",
+            "rows": [
+              {
+                "count": 12,
+                "disposition": "none",
+                "dkim": "pass",
+                "header_from": "example.com",
+                "source_ip": "192.0.2.1",
+                "spf": "fail"
+              }
+            ],
+            "sha256": "deaf0944d577aeb1105fec05b79366dd6e9c071308a9d32cf0a916a80b3005c5",
+            "total_messages": 12
+          },
+          "detail": "Local analysis; review limitations in evidence.",
+          "module": "dmarc",
+          "source": null,
+          "status": "observed"
+        }
+      ],
+      "id": "f1f1f59153b843dabb81794acdfd9302",
+      "indicator": "examples/dmarc.xml",
+      "kind": "dmarc",
+      "profile": "offline",
+      "sha256": "ea2b456dc47a0499ecd0cf1f14c3a93635d99615e4f5f8e1bf05e77d0a631f91",
+      "version": "1.4.0"
+    },
+    {
+      "case_id": "41c13522a19a",
+      "created_at": "2026-09-09T12:20:54.170062+00:00",
+      "findings": [
+        {
+          "data": {
+            "note": "Requires known names; a matching pattern does not confirm other generated addresses.",
+            "observations": [
+              {
+                "confidence": "matches_supplied_name_and_address",
+                "domain": "example.com",
+                "email": "alice.smith@example.com",
+                "matching_pattern": "first.last"
+              },
+              {
+                "confidence": "matches_supplied_name_and_address",
+                "domain": "example.com",
+                "email": "bob.jones@example.com",
+                "matching_pattern": "first.last"
+              }
+            ]
+          },
+          "detail": "Local analysis; review limitations in evidence.",
+          "module": "patterns",
+          "source": null,
+          "status": "observed"
+        }
+      ],
+      "id": "e88c5055aba24d82be9b3c70c13609b9",
+      "indicator": "examples/names.csv",
+      "kind": "patterns",
+      "profile": "offline",
+      "sha256": "c04d20511db488344a4157540be500089a43c764ab081959619759730b0be7e5",
+      "version": "1.4.0"
+    }
+  ],
+  "schema_version": 1
+}

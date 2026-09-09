@@ -1,0 +1,20 @@
+[
+  {
+    "email": "billing@example.com",
+    "provider": "Fictional provider A",
+    "source": "https://example.com/contact",
+    "claim": "account_association",
+    "value": "reported-present",
+    "observed_at": "2026-09-01T00:00:00Z",
+    "upstream_source": "training-source"
+  },
+  {
+    "email": "billing@example.com",
+    "provider": "Fictional provider B",
+    "source": "https://example.com/contact",
+    "claim": "account_association",
+    "value": "reported-absent",
+    "observed_at": "2026-09-01T00:00:00Z",
+    "upstream_source": "training-source"
+  }
+]

@@ -1,0 +1,324 @@
+{
+  "account_associations": [],
+  "addresses": [
+    {
+      "alias_note": "Provider-specific hint only; originals are never merged.",
+      "domain": "example.com",
+      "email": "student@example.com",
+      "evidence": [
+        {
+          "module": "syntax",
+          "run": "feffbb4366b540bb8fdc1934187ecf7d",
+          "status": "valid_syntax"
+        },
+        {
+          "module": "disposable",
+          "run": "feffbb4366b540bb8fdc1934187ecf7d",
+          "status": "not_listed"
+        }
+      ],
+      "possible_alias_group": null,
+      "role": "unclassified"
+    },
+    {
+      "alias_note": "Provider-specific hint only; originals are never merged.",
+      "domain": "example.net",
+      "email": "payment@example.net",
+      "evidence": [
+        {
+          "module": "mailbox",
+          "run": "76442efc4ee84c7b81d1370d67c2e524",
+          "status": "observed"
+        }
+      ],
+      "possible_alias_group": null,
+      "role": "unclassified"
+    },
+    {
+      "alias_note": "Provider-specific hint only; originals are never merged.",
+      "domain": "example.com",
+      "email": "training-1@example.com",
+      "evidence": [
+        {
+          "module": "mailbox",
+          "run": "76442efc4ee84c7b81d1370d67c2e524",
+          "status": "observed"
+        }
+      ],
+      "possible_alias_group": null,
+      "role": "unclassified"
+    },
+    {
+      "alias_note": "Provider-specific hint only; originals are never merged.",
+      "domain": "example.org",
+      "email": "student@example.org",
+      "evidence": [
+        {
+          "module": "mailbox",
+          "run": "76442efc4ee84c7b81d1370d67c2e524",
+          "status": "observed"
+        }
+      ],
+      "possible_alias_group": null,
+      "role": "unclassified"
+    },
+    {
+      "alias_note": "Provider-specific hint only; originals are never merged.",
+      "domain": "example.com",
+      "email": "billing@example.com",
+      "evidence": [
+        {
+          "module": "mailbox",
+          "run": "76442efc4ee84c7b81d1370d67c2e524",
+          "status": "observed"
+        },
+        {
+          "module": "extract",
+          "run": "7d1aa280bded45559624ba14f435c4a7",
+          "status": "observed"
+        },
+        {
+          "module": "import-claims",
+          "run": "0555a469221040138657b472a3247f1c",
+          "status": "observed"
+        }
+      ],
+      "possible_alias_group": null,
+      "role": "role_address"
+    },
+    {
+      "alias_note": "Provider-specific hint only; originals are never merged.",
+      "domain": "example.com",
+      "email": "training-2@example.com",
+      "evidence": [
+        {
+          "module": "mailbox",
+          "run": "76442efc4ee84c7b81d1370d67c2e524",
+          "status": "observed"
+        }
+      ],
+      "possible_alias_group": null,
+      "role": "unclassified"
+    },
+    {
+      "alias_note": "Provider-specific hint only; originals are never merged.",
+      "domain": "example.com",
+      "email": "support@example.com",
+      "evidence": [
+        {
+          "module": "extract",
+          "run": "7d1aa280bded45559624ba14f435c4a7",
+          "status": "observed"
+        }
+      ],
+      "possible_alias_group": null,
+      "role": "role_address"
+    },
+    {
+      "alias_note": "Provider-specific hint only; originals are never merged.",
+      "domain": "example.com",
+      "email": "bob.jones@example.com",
+      "evidence": [
+        {
+          "module": "patterns",
+          "run": "e88c5055aba24d82be9b3c70c13609b9",
+          "status": "observed"
+        }
+      ],
+      "possible_alias_group": null,
+      "role": "unclassified"
+    },
+    {
+      "alias_note": "Provider-specific hint only; originals are never merged.",
+      "domain": "example.com",
+      "email": "alice.smith@example.com",
+      "evidence": [
+        {
+          "module": "patterns",
+          "run": "e88c5055aba24d82be9b3c70c13609b9",
+          "status": "observed"
+        }
+      ],
+      "possible_alias_group": null,
+      "role": "unclassified"
+    }
+  ],
+  "breach_timeline": [],
+  "claim_timeline": [
+    {
+      "claim": "account_association",
+      "confidence": "imported_provider_claim",
+      "email": "billing@example.com",
+      "observed_at": "2026-09-01T00:00:00Z",
+      "provider": "Fictional provider A",
+      "source": "https://example.com/contact",
+      "upstream_source": "training-source",
+      "value": "reported-present"
+    },
+    {
+      "claim": "account_association",
+      "confidence": "imported_provider_claim",
+      "email": "billing@example.com",
+      "observed_at": "2026-09-01T00:00:00Z",
+      "provider": "Fictional provider B",
+      "source": "https://example.com/contact",
+      "upstream_source": "training-source",
+      "value": "reported-absent"
+    }
+  ],
+  "completeness": {
+    "analyst_events": [],
+    "failed_or_unknown_modules": [],
+    "has_evidence": true,
+    "unresolved_claim_conflicts": 1
+  },
+  "conflicts": [
+    {
+      "claim": "account_association",
+      "email": "billing@example.com",
+      "note": "Values may reflect different dates or definitions; analyst review required.",
+      "observations": [
+        {
+          "claim": "account_association",
+          "confidence": "imported_provider_claim",
+          "email": "billing@example.com",
+          "observed_at": "2026-09-01T00:00:00Z",
+          "provider": "Fictional provider A",
+          "source": "https://example.com/contact",
+          "upstream_source": "training-source",
+          "value": "reported-present"
+        },
+        {
+          "claim": "account_association",
+          "confidence": "imported_provider_claim",
+          "email": "billing@example.com",
+          "observed_at": "2026-09-01T00:00:00Z",
+          "provider": "Fictional provider B",
+          "source": "https://example.com/contact",
+          "upstream_source": "training-source",
+          "value": "reported-absent"
+        }
+      ]
+    }
+  ],
+  "document_occurrences": [
+    {
+      "alias_note": "Provider-specific hint only; originals are never merged.",
+      "confidence": "observed_in_supplied_document",
+      "context": "Support: support@example.com",
+      "domain": "example.com",
+      "email": "support@example.com",
+      "location": "line 2",
+      "possible_alias_group": null,
+      "role": "role_address",
+      "source": "contacts.txt"
+    },
+    {
+      "alias_note": "Provider-specific hint only; originals are never merged.",
+      "confidence": "observed_in_supplied_document",
+      "context": "Accounts: billing@example.com",
+      "domain": "example.com",
+      "email": "billing@example.com",
+      "location": "line 3",
+      "possible_alias_group": null,
+      "role": "role_address",
+      "source": "contacts.txt"
+    },
+    {
+      "confidence": "matches_supplied_name_and_address",
+      "domain": "example.com",
+      "email": "alice.smith@example.com",
+      "matching_pattern": "first.last"
+    },
+    {
+      "confidence": "matches_supplied_name_and_address",
+      "domain": "example.com",
+      "email": "bob.jones@example.com",
+      "matching_pattern": "first.last"
+    }
+  ],
+  "graph_edges": [
+    {
+      "email": "student@example.com",
+      "evidence": "syntax",
+      "target": "domain: example.com"
+    },
+    {
+      "email": "payment@example.net",
+      "evidence": "syntax",
+      "target": "domain: example.net"
+    },
+    {
+      "email": "training-1@example.com",
+      "evidence": "syntax",
+      "target": "domain: example.com"
+    },
+    {
+      "email": "student@example.org",
+      "evidence": "syntax",
+      "target": "domain: example.org"
+    },
+    {
+      "email": "billing@example.com",
+      "evidence": "syntax",
+      "target": "domain: example.com"
+    },
+    {
+      "email": "training-2@example.com",
+      "evidence": "syntax",
+      "target": "domain: example.com"
+    },
+    {
+      "email": "support@example.com",
+      "evidence": "syntax",
+      "target": "domain: example.com"
+    },
+    {
+      "email": "bob.jones@example.com",
+      "evidence": "syntax",
+      "target": "domain: example.com"
+    },
+    {
+      "email": "alice.smith@example.com",
+      "evidence": "syntax",
+      "target": "domain: example.com"
+    },
+    {
+      "email": "billing@example.com",
+      "evidence": "https://example.com/contact",
+      "target": "claim: Fictional provider A / reported-present"
+    },
+    {
+      "email": "billing@example.com",
+      "evidence": "https://example.com/contact",
+      "target": "claim: Fictional provider B / reported-absent"
+    }
+  ],
+  "shared_declared_sources": [
+    {
+      "providers": [
+        "Fictional provider A",
+        "Fictional provider B"
+      ],
+      "source": "training-source"
+    }
+  ],
+  "signals": [
+    {
+      "confidence": "heuristic_review_required",
+      "message": "7ba9450971152d2f04110492de47f3d680adf2cf0ac98a6c184593c24aeff9ca",
+      "signal": "Reply-To differs from From: can be legitimate; review intended reply destination."
+    },
+    {
+      "confidence": "heuristic_review_required",
+      "message": "7ba9450971152d2f04110492de47f3d680adf2cf0ac98a6c184593c24aeff9ca",
+      "signal": "Reply destination changed from parent message; manual review required."
+    },
+    {
+      "confidence": "heuristic_review_required",
+      "message": "7ba9450971152d2f04110492de47f3d680adf2cf0ac98a6c184593c24aeff9ca",
+      "signal": "Labelled payment details changed from parent message; manual review required."
+    }
+  ],
+  "source_independence_note": "Only identical declared sources are grouped. Unknown underlying sources remain unknown, not independent."
+}

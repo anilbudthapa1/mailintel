@@ -1,0 +1,3 @@
+Training Company
+Support: support@example.com
+Accounts: billing@example.com
